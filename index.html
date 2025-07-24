@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aya Reyad | Graphic Designer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Zr+gDwYV9LslJH4PUnl2QaN0SuwA8G/6s1OVRmN4FK/EDVThC2jDhYvUjV+YcZY2vZxOf1Vn3+3GAYElPpt+og==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/IMGS/favicon.png" type="image/png">
+    <style>
+        :root {
+            --primary: #f8c7cc;
+            --secondary: #e8a2b3;
+            --accent: #d17b8f;
+            --dark: #3a3a3a;
+            --light: #f9f3f4;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            margin: 0!important;
+            padding: 0!important;
+            background-color: #fff;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+              margin: 0!important;
+  padding: 0!important;
+        }
+
+        #hero {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color:#d17b8f;
+            font-weight: 400;
+            text-decoration: none;
+              transition: color 0.3s ease;
+        }
+
+       
+
+.scrolled-logo {
+  color:#d17b8f;
+}
+
+        .photoshop-web{
+
+            background-color: #F9F3F4 !important;
+        }
+
+        .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #d17b8f !important;}
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(248, 199, 204, 0.2), rgba(248, 199, 204, 0.2)), url('https://placehold.co/1920x1080') no-repeat center center/cover;
+            background-image: url('/IMGS/ChatGPT\ Image\ Jul\ 24\,\ 2025\,\ 04_32_19\ AM.png'); /* Replace with your actual image URL */
+            background-size: cover;
+        }
+        
+        .hero-content {
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--accent);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .skills {
+            margin-top: 30px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--accent);
+            border-radius: 5px;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(209, 123, 143, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonial {
+            display: none;
+            padding: 0 20px;
+        }
+        
+        .testimonial.active {
+            display: block;
+            animation: fadeIn 1s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .testimonial-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: var(--accent);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Raleway', sans-serif;
+        }
+        
+        .form-group textarea {
+            height: 150px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+        <div class="navbar" id="navbar">
+                    <div class="container">
+            <nav>
+                <a href="#" class="logo">Aya Reyad</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Creating Beautiful Visual Experiences</h1>
+                <p>Hi, I'm Aya - a professional Artist, an Ex Frontend Developer & a passionate junior graphic designer. I create designs that tell stories and evoke emotions.</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/IMGS/IMG_5633.jpg" alt="Aya Reyad, a young female graphic designer with brown hair working at her desk with design tools">
+                </div>
+                <div class="about-text">
+                    <h3>Designing with Passion & Purpose</h3>
+                    <p>With a Bachelor's degree in <b>Art Education</b> and over <b>9 years</b> of using <b>Adobe Photoshop</b> & <b>Adobe Illustrator </b>, I've developed a keen eye for detail and a passion for creating visually stunning designs. My approach combines modern aesthetics with timeless principles to deliver designs that are both beautiful and functional.</p>
+                    <p><br>When I'm not designing, you can find me sketching in my notebook, brainstorming handmade product ideas, or wandering through quiet corners of the city for inspiration.</p>
+                    
+                    <div class="skills">
+                        <h3>My Skills</h3>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Adobe Photoshop</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Adobe Illustrator</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Brand Identity</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+
+
+
+<!-- === Portfolio Projects Swiper === -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom: 20px;">My Portfolio</h2>
+    <p class="section-intro" style="text-align: center; margin-bottom: 20px ;">From bold visuals to subtle touches, I aim to create work that feels both intentional and inspiring. <span style="font-weight: 900; color: #d17b8f;"><br>Slide To See The Next</span></p>
+    <!-- Swiper Container -->
+    <div class="swiper portfolio-swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/vogue-cover-Recovered.jpg" alt="">
+          <p class="project-desc">
+A bold fusion of classic and contemporary, this design reimagines Umm Kulthum gracing the cover of Vogue with timeless elegance. It pays tribute to her legendary legacy through modern fashion and editorial flair.</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/Perfume-AD.jpg" alt="">
+          <p class="project-desc">A seductive Red-toned layout with soft shadows and glowing highlights, evoking warmth and mystery. The composition draws the eye to the perfume bottle, wrapped in rich, velvety textures and golden accents.</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/Converse-Post.jpg" alt="">
+          <p class="project-desc">A Converse sneaker floats effortlessly on a paper sheet, defying gravity with playful exaggeration. The design speaks volumes—light as paper, bold as ever.</p>
+        </div>
+                                <div class="swiper-slide">
+          <img src="/IMGS/107.jpg" alt="">
+          <p class="project-desc">A soft, feminine book cover in shades of blush pink and off-white, featuring delicate handwritten elements that echo the intimacy of a diary. The design feels personal and Victorian a whispered secret between pages.
+</p>
+        </div>
+
+                        <div class="swiper-slide">
+          <img src="/IMGS/118.jpg" alt="">
+          <p class="project-desc">A sleek black and white book cover with clean lines and minimal details, evoking quiet strength and refined masculinity. The design captures the depth of a personal diary—elegant, introspective, and timeless.</p>
+        </div>
+        
+        <div class="swiper-slide">
+          <img src="/IMGS/Stuffaya-final-final-final-logo-design-pink.jpg" alt="">
+          <p class="project-desc">A whimsical, hand-touched design blending softness and charm, *Stuffaya* reflects the love story of Mustafa and Aya. Each element feels personal—crafted with heart, styled with soul. Done with <b>Adobe Illustrator</b>
+</p>
+        </div>
+                <div class="swiper-slide">
+          <img src="/IMGS/Stuffaya-Primary-&-Submark-Logo.jpg" alt="">
+          <p class="project-desc">Primary Logo & Submark of Stuffaya Brand</p>
+        </div>
+
+
+        <!-- Add more slides as needed -->
+      </div>
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- === Photoshop Web Design Section === -->
+<section class="photoshop-web" id="photoshop-web">
+  <div class="container">
+    <h2 class="section-title">Webpages Designed with Adobe Photoshop</h2>
+    <p class="section-intro">This section showcases Some Webpages that have been Designed in Adobe Photoshop before development. Each design reflects a thoughtful balance of creativity, usability, and branding. <br><span style="color:#d17b8f; font-weight: 900;">You can view every webpage just by clicking on its name</span></p>
+    
+    <div class="portfolio-grid">
+
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/CRUD-system.jpg" alt="Café Lumière Branding">
+          <br><a href="https://aiareyad.github.io/CRUD-system/" style="text-decoration: none; font-family: 'Playfair Display', serif; color: #d17b8f; font-size: 19px; font-weight: 900;">CRUD-System</a>
+          <p class="project-desc">A CRUD system allows users to Create, Read, Update, and Delete data seamlessly. It's the core of many dynamic web apps like task managers, blogs, or admin dashboards.</p>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/Bookmarks.png" alt="Enchanted Forest Illustration">
+          <br><a href="https://aiareyad.github.io/Bookmarks/" style="text-decoration: none; font-family: 'Playfair Display', serif; color: #d17b8f; font-size: 19px; font-weight: 900;">Bookmarks</a>
+          <p class="project-desc">A Bookmark Saver lets users store, view, and manage their favorite websites in one place. It simplifies access to important links with options to add, edit, or delete bookmarks.</p>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img src="/IMGS/Quote App.png" alt="Bridal Invitation Suite">
+          <br><a href="https://aiareyad.github.io/Quote-App/" style="text-decoration: none; font-family: 'Playfair Display', serif; color: #d17b8f; font-size: 19px; font-weight: 900;">Quote App</a>
+          <p class="project-desc">A Quote App displays random inspirational quotes to uplift and motivate users. It can also allow copyig the Quote to share it with your friends later!</p>
+        </div>
+
+        <!-- Add more slides as needed -->
+      </div>
+      </div>
+      <!-- Add more Photoshop UI designs here -->
+    </div>
+  </div>
+</section>
+
+<!-- === Contact Section for Job Application === -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom: 0px;">Contact & Details</h2>
+
+    <div class="contact-info" style="margin-top: 0;">
+
+      <p class="section-intro" style="margin-bottom:20px ;">I'm currently open to junior graphic design roles. Here are my details if you'd like to connect or schedule an interview.</p>
+      <p><strong>Location:</strong> Alexandria, Egypt</p>
+      <p><strong>Phone:</strong> +20 127 984 4756</p>
+      <p><strong>Email:</strong> aya1essam2@gmail.com</p>
+      <p><strong>Education:</strong> Bachelor in Art Education</p>
+      <p><strong>Skills:</strong> Graphic Design, Adobe Photoshop, Adobe Illustrator, CapCut, HTML, CSS, JavaScript,  VS Code</p>
+      <p><strong>Portfolio:</strong> <a href="https://aiareyad.github.io/Aya-Reyad/">Here</a></p>
+      <p><strong>Resume:</strong> <a href="/Aya-Reyad-Resume.pdf" target="_blank">Review PDF</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Swiper JS and CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.portfolio-swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 30,
+    centeredSlides: true,
+    slidesPerView: 1,
+    grabCursor: true,
+  });
+
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("navbar");
+    const logo = document.getElementById("logo");
+
+    if (window.scrollY > 10) {
+      navbar.classList.add("scrolled");
+      logo.classList.add("scrolled-logo");
+    } else {
+      navbar.classList.remove("scrolled");
+      logo.classList.remove("scrolled-logo");
+    }
+  });
+</script>
+
+
+<!-- Add to style tag -->
+<style>
+    html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position:static;
+  top: 0;
+  background-color: #ffffff8f;
+  opacity: 80%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 1000;
+  padding: 5px 0;
+  width:100%
+  
+}
+
+  .swiper {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  .swiper-slide {
+    text-align: center;
+  }
+  .swiper-slide img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  .project-desc {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: var(--dark);
+  }
+  .photoshop-web .section-intro {
+    text-align: center !important;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    
+  }
+  .contact-info {
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+  }
+  .contact-info p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    word-wrap: break-word;
+  }
+  .contact-info a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  @media screen and (max-width: 768px) {
+    .portfolio-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-info {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  }
+</style>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aya Reyad. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Testimonial Slider
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("testimonial");
+            let dots = document.getElementsByClassName("dot");
+            
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            
+            slides[slideIndex-1].classList.add("active");
+            dots[slideIndex-1].classList.add("active");
+        }
+        
+        // Auto-rotate testimonials
+        setInterval(function() {
+            slideIndex++;
+            if (slideIndex > 3) { slideIndex = 1 }
+            showSlides(slideIndex);
+        }, 5000);
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
