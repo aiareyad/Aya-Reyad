@@ -426,6 +426,91 @@
                 display: none;
             }
         }
+
+        .portfolio {
+    padding: 60px 20px;
+  }
+
+  .portfolio .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .portfolio .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .portfolio .section-intro {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Swiper Slide Styling */
+  .portfolio .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .portfolio .swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .portfolio .project-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+    padding: 0 10px;
+    max-width: 600px;
+  }
+
+  /* Swiper Pagination */
+  .swiper-pagination {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .portfolio .section-title {
+      font-size: 1.6rem;
+    }
+
+    .portfolio .section-intro {
+      font-size: 0.95rem;
+    }
+
+    .portfolio .project-desc {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .portfolio {
+      padding: 40px 10px;
+    }
+
+    .portfolio .swiper-slide img {
+      max-width: 100%;
+    }
+
+    .portfolio .project-desc {
+      font-size: 0.85rem;
+      padding: 0 5px;
+    }
+  }
     </style>
 </head>
 <body>
@@ -615,7 +700,7 @@ A bold fusion of classic and contemporary, this design reimagines Umm Kulthum gr
       <p><strong>Education:</strong> Bachelor in Art Education</p>
       <p><strong>Skills:</strong> Graphic Design, Adobe Photoshop, Adobe Illustrator, CapCut, HTML, CSS, JavaScript,  VS Code</p>
       <p><strong>Portfolio:</strong> <a href="https://aiareyad.github.io/Aya-Reyad/">Here</a></p>
-      <p><strong>Resume:</strong> <a href="/Aya-Reyad-Resume.pdf" target="_blank">Review PDF</a></p>
+      <p><strong>Resume:</strong> <a href="Aya-Reyad-Resume.pdf" target="_blank">Review PDF</a></p>
     </div>
   </div>
 </section>
@@ -626,7 +711,7 @@ A bold fusion of classic and contemporary, this design reimagines Umm Kulthum gr
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<script>
+
   const swiper = new Swiper('.portfolio-swiper', {
     loop: true,
     pagination: {
@@ -789,6 +874,25 @@ A bold fusion of classic and contemporary, this design reimagines Umm Kulthum gr
                 });
             });
         });
+
+  const swiper = new Swiper('.portfolio-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 2.5,
+      },
+    },
+  });
+
+
     </script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
